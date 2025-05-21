@@ -209,8 +209,17 @@ st.markdown("""
 col_logo, col_title, col_features = st.columns([20, 20, 20])  # تقسيم الصفحة إلى 3 أعمدة
 
 # العمود الأول: عرض شعار ليبيا إكس
+col_logo, col_title, col_features = st.columns([20, 20, 20])
+
 with col_logo:
-st.image("https://raw.githubusercontent.com/almezo/Libya-X/blob/main/Libya_X_CHATBOT/libyax_logo.png", width=200)
+    st.markdown(
+        """
+        <div style='margin-top: -60px; text-align: left;'>
+            <img src="https://raw.githubusercontent.com/almezo/Libya-X/main/Libya_X_CHATBOT/libyax_logo.png" width="200">
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
 # العمود الثاني: عنوان الموقع الترحيبي
 with col_title:
