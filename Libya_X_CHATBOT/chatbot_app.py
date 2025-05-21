@@ -222,7 +222,7 @@ with col_logo:
 # العمود الثاني: عنوان الموقع الترحيبي
 with col_title:
     st.markdown("""
-        <div style='text-align: center; margin-top: -50px;'>
+        <div style='text-align: center; margin-top: -10px;'>
             <h3><span style='color:green;'>مرحباً بك </span> في <span style='color:red;'> ليبيا اكس </span><h3> المنصة الرائدة في بيع اشتراكات <h3><b style='color:red;'>IP</b>T<b style='color:green;'>V</b></h3>
         </div>
     """, unsafe_allow_html=True)
@@ -230,7 +230,7 @@ with col_title:
 # العمود الثالث: عرض مميزات المنصة
 with col_features:
     st.markdown("""
-        <div dir="rtl" style="text-align: right; margin-top: -50px;">
+        <div dir="rtl" style="text-align: right; margin-top: 200px;">
             <ul>
                 <li>موزع معتمد في ليبيا</li>
                 <li>باقات قنوات فضائية</li>
