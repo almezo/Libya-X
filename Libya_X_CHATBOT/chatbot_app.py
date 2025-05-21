@@ -218,7 +218,7 @@ st.markdown("""
 
 col_logo, col_title, col_features = st.columns([20, 20, 20])
 with col_logo:
-    st.image("libyax_logo.png", width=200)
+st.image("https://raw.githubusercontent.com/almezo/Libya-X/blob/main/Libya_X_CHATBOT/libyax_logo.png", width=200)
 with col_title:
     st.markdown("""
         <div style='text-align: center; margin-top: 10px;'>
