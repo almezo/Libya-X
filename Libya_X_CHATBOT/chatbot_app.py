@@ -210,7 +210,7 @@ col_logo, col_title, col_features = st.columns([20, 20, 20])  # تقسيم ال�
 
 # العمود الأول: عرض شعار ليبيا إكس
 with col_logo:
-    st.image("https://raw.githubusercontent.com/almezo/Libya-X/main/Libya_X_CHATBOT/libyax_logo.png", width=200)
+st.image("https://raw.githubusercontent.com/almezo/Libya-X/blob/main/Libya_X_CHATBOT/libyax_logo.png", width=200)
 
 # العمود الثاني: عنوان الموقع الترحيبي
 with col_title:
