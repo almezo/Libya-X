@@ -212,8 +212,8 @@ col_logo, col_title, col_features = st.columns([20, 20, 20])  # تقسيم ال�
 with col_logo:
     st.markdown(
         """
-        <div style='margin-top: -60px; text-align: left;'>
-            <img src="https://raw.githubusercontent.com/almezo/Libya-X/main/Libya_X_CHATBOT/libyax_logo.png" width="100">
+        <div style='margin-top: -60px; text-align: middle;'>
+            <img src="https://raw.githubusercontent.com/almezo/Libya-X/main/Libya_X_CHATBOT/libyax_logo.png" width="200">
         </div>
         """,
         unsafe_allow_html=True
@@ -262,7 +262,7 @@ with st.form(key="chat_form", clear_on_submit=True):
     col1, col2, col3 = st.columns([60, 4, 7])  # تقسيم الصف إلى ثلاثة أعمدة (نص، إرسال، مسح)
     user_input = col1.text_input(label="", placeholder="اكتب استفسارك هنا... 💬")  # مربع إدخال نص
     send_clicked = col2.form_submit_button("إرسال 📨")  # زر الإرسال
-    clear_clicked = col3.form_submit_button("مسح السجل المحادثه 🗑️")  # زر المسح
+    clear_clicked = col3.form_submit_button("مسح سجل المحادثه 🗑️")  # زر المسح
 st.markdown("</div>", unsafe_allow_html=True)
 
 # ----------------------------------------------------------------------------------------------------------------------#
