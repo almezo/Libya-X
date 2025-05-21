@@ -230,7 +230,7 @@ with col_title:
 # العمود الثالث: عرض مميزات المنصة
 with col_features:
     st.markdown("""
-        <div dir="rtl" style="text-align: right; margin-top: 200px;">
+        <div dir="rtl" style="text-align: right; margin-top: 20px;">
             <ul>
                 <li>موزع معتمد في ليبيا</li>
                 <li>باقات قنوات فضائية</li>
