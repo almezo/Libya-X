@@ -212,7 +212,7 @@ col_logo, col_title, col_features = st.columns([20, 20, 20])  # تقسيم ال�
 with col_logo:
     st.markdown(
         """
-        <div style='margin-top: -60px; text-align: middle;'>
+        <div style='margin-top: -60px; text-align: center;'>
             <img src="https://raw.githubusercontent.com/almezo/Libya-X/main/Libya_X_CHATBOT/libyax_logo.png" width="200">
         </div>
         """,
