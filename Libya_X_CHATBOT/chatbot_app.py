@@ -206,7 +206,7 @@ st.markdown("""
 
 # ----------------------------------------------------------------------------------------------------------------------#
 # عرض الشعار والعنوان الرئيسي للموقع
-col_logo, col_title, col_features = st.columns([20, 20, 20])  # تقسيم الصفحة إلى 3 أعمدة
+st.image("https://raw.githubusercontent.com/almezo/Libya-X/blob/main/Libya_X_CHATBOT/libyax_logo.png", width=200)
 
 # العمود الأول: عرض شعار ليبيا إكس
 with col_logo:
