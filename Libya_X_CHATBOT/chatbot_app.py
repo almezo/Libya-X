@@ -154,6 +154,8 @@ if "chat" not in st.session_state:
     st.session_state.chat = []
 
 #----------------------------------------------------------------------------------------------------------------------#
+# CSS لتنسيق المحادثة وإدخال منسق
+
 st.markdown("""
     <style>
         .chat-history {
@@ -164,13 +166,10 @@ st.markdown("""
             border-radius: 10px;
             background-color: #fdfdfd;
             margin-bottom: 100px;
-
-            /* ✅ التكبير والتدكين */
             font-size: 22px !important;
             font-weight: bold !important;
             line-height: 2.2;
         }
-
         .chat-input-container {
             position: fixed;
             bottom: 0;
@@ -181,7 +180,6 @@ st.markdown("""
             box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
             z-index: 1000;
         }
-
         .stTextInput > div > input {
             padding: 10px !important;
             border-radius: 10px !important;
@@ -189,7 +187,6 @@ st.markdown("""
             font-size: 18px !important;
             font-weight: bold !important;
         }
-
         .stButton>button {
             background-color: #f0f0f0;
             border: none;
@@ -200,11 +197,9 @@ st.markdown("""
             cursor: pointer;
             transition: 0.3s;
         }
-
         .stButton>button:hover {
             background-color: #e0e0e0;
         }
-
         input[type="text"] {
             direction: rtl !important;
             text-align: right !important;
@@ -218,7 +213,7 @@ st.markdown("""
 
 col_logo, col_title, col_features = st.columns([20, 20, 20])
 with col_logo:
-st.image("https://raw.githubusercontent.com/almezo/Libya-X/blob/main/Libya_X_CHATBOT/libyax_logo.png", width=200)
+    st.image("https://raw.githubusercontent.com/almezo/Libya-X/main/Libya_X_CHATBOT/libyax_logo.png", width=200)
 with col_title:
     st.markdown("""
         <div style='text-align: center; margin-top: 10px;'>
@@ -240,7 +235,7 @@ with col_features:
 st.markdown("<hr>", unsafe_allow_html=True)
 
 #----------------------------------------------------------------------------------------------------------------------#
-# عرض سجل المحادثة داخل صندوق قابل للتمرير
+# عرض سجل المحادثة
 
 st.markdown("<h4 style='text-align: center;'>📜 سجل المحادثة</h4>", unsafe_allow_html=True)
 st.markdown("<div class='chat-history'>", unsafe_allow_html=True)
@@ -250,7 +245,7 @@ for speaker, msg in st.session_state.chat:
 st.markdown("</div>", unsafe_allow_html=True)
 
 #----------------------------------------------------------------------------------------------------------------------#
-# واجهة المستخدم لإرسال الرسائل
+# نموذج الإدخال
 
 st.markdown("<div class='chat-input-container'>", unsafe_allow_html=True)
 with st.form(key="chat_form", clear_on_submit=True):
@@ -261,7 +256,7 @@ with st.form(key="chat_form", clear_on_submit=True):
 st.markdown("</div>", unsafe_allow_html=True)
 
 #----------------------------------------------------------------------------------------------------------------------#
-# زر مسح المحادثة
+# مسح السجل
 
 if clear_clicked:
     st.session_state.chat.clear()
@@ -271,7 +266,7 @@ if clear_clicked:
     st.rerun()
 
 #----------------------------------------------------------------------------------------------------------------------#
-# إرسال رسالة المستخدم وتوليد رد عبر الذكاء الاصطناعي
+# الرد على رسائل المستخدم
 
 if send_clicked and user_input.strip():
     msg = user_input.strip()
@@ -280,7 +275,7 @@ if send_clicked and user_input.strip():
 
     with st.spinner("🤖 يتم توليد الرد بواسطة الذكاء الاصطناعي..."):
         reply = client.chat.completions.create(
-            model="llama3-70b-8192",  # أو gpt-4o إن توفر
+            model="llama3-70b-8192",
             messages=st.session_state.messages,
             temperature=0.7
         ).choices[0].message.content
